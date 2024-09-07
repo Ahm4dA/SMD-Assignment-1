@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ReceiverActivity">
+
+    <TextView
+        android:id="@+id/receiverTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:text="@string/receiver_title_text"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        android:gravity="start"
+        android:paddingEnd="150dp"
+        android:background="@color/red"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        tools:targetApi="p" />
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/receiverEmailEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_hint_text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/receiverTitleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="50dp"/>
+
+    <!-- Full Name EditText -->
+    <EditText
+        android:id="@+id/receiverFullNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_hint_text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/receiverEmailEditText"
+        app:layout_constraintStart_toStartOf="@id/receiverEmailEditText"
+        app:layout_constraintEnd_toEndOf="@id/receiverEmailEditText"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Contact Information EditText -->
+    <EditText
+        android:id="@+id/receiverContactInfoEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/contact_hint_text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/receiverFullNameEditText"
+        app:layout_constraintStart_toStartOf="@id/receiverFullNameEditText"
+        app:layout_constraintEnd_toEndOf="@id/receiverFullNameEditText"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Country EditText -->
+    <EditText
+        android:id="@+id/receiverCountryEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/country_hint_text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/receiverContactInfoEditText"
+        app:layout_constraintStart_toStartOf="@id/receiverContactInfoEditText"
+        app:layout_constraintEnd_toEndOf="@id/receiverContactInfoEditText"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Address EditText -->
+    <EditText
+        android:id="@+id/receiverAddressEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/address_hint_text"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/receiverCountryEditText"
+        app:layout_constraintStart_toStartOf="@id/receiverCountryEditText"
+        app:layout_constraintEnd_toEndOf="@id/receiverCountryEditText"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/receiverNextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sender_next_button_text"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/receiverAddressEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
